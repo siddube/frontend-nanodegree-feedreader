@@ -51,7 +51,7 @@ $(function() {
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
+    /* Write a new test suite named "The menu" */
     
     describe('The Menu', function() {
         
@@ -99,7 +99,7 @@ $(function() {
             expect(entries.length >= 1).toBeTruthy();
         });
     });
-    /* TODO: Write a new test suite named "New Feed Selection"*/
+    /*  Write a new test suite named "New Feed Selection"*/
    describe('New Feed Selection', function() {
         var oldContent, newContent;
 
@@ -110,10 +110,10 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, function() {
                 /* Set the old content of feed */
-                oldContent = $('.feed').find('.entry').text();
+                oldContent = $('.feed .entry').text();
                 loadFeed(1, function() {
                     /* Set the new content of new feed */
-                    newContent = $('.feed').find('.entry').text();
+                    newContent = $('.feed .entry').text();
                     done();
                 });
             });
